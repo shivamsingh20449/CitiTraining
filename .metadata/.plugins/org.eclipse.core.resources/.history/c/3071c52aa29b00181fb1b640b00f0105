@@ -1,0 +1,8 @@
+package com.demo;
+
+public interface MyInterface {
+	
+	void showData();		//SHould only have a single method.. see
+	
+	
+}

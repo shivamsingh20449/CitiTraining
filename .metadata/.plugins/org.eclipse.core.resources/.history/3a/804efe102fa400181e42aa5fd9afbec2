@@ -1,0 +1,30 @@
+package com.DAO;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.connections.MyConnection;
+import com.pojo.Employee;
+
+public class EmployeeDAO {
+	
+	public List<Employee> findAllEmployees()
+	{
+		Connection con = MyConnection.getMyConnection();
+		List<Employee> employees=new ArrayList<>();
+		
+		String SELECT_ALL="select * from employee";
+		
+		try {
+			Statement st = con.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

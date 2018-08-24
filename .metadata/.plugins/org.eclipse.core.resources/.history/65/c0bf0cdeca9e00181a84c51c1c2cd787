@@ -1,0 +1,42 @@
+package com.annotation;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+
+public class TestAnnotation {
+	
+	//@MyDateAnnotation(day = 1)
+	
+	@MyAnnotation(value=100)
+	public static void display()
+	{
+		System.out.println("display");
+		
+	}
+	
+	public static void main(String[] args) {
+		TestAnnotation test = new TestAnnotation();
+		Class class1 = test.getClass();
+		
+		Method[] methods = class1.getMethods();
+		for (Method method : methods )
+		{
+			Annotation[] annotations = method.getAnnotations();
+			
+			for(Annotation anno : annotations)
+			{
+				if(anno.annotationType().equals(MyDateAnnotation.class));
+				{
+					MyDateAnnotation m = (MyDateAnnotation)anno;
+					int day = m.day();
+					System.out.println(day);
+				}
+			}
+			
+		}
+		
+		
+		
+	}
+
+}

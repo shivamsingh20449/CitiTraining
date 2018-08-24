@@ -1,0 +1,43 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class DemoMultiCatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Throwable
+//		Exception#
+//		FilenotFound
+//		IOException
+		
+//		FileInputStream
+////		
+//		
+//			try{
+//				FileInputStream fi = new FileInputStream("Hello.txt");
+//				ObjectInputStream oi = new ObjectInputStream(fi);
+//			}catch (FileNotFoundException | IOException e) {
+//				
+//				e.printStackTrace();
+//			
+//	}}
+		
+	try(FileInputStream fi = new FileInputStream("abc.java");)
+	{
+		ObjectInputStream oi = new ObjectInputStream(fi);
+		oi.readObject();
+	} catch(IOException | ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+	
+
+			
+		
+		
+	}
+
+}

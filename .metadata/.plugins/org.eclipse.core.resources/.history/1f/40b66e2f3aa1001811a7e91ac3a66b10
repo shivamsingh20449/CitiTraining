@@ -1,0 +1,36 @@
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.connections.MyConnection;
+
+public class LoginDAO {
+	
+	public boolean checkLogin(String username, String password)	
+	{
+		
+		String INSERT_EMPLOYEE = "insert into emp3 values(?,?,?)";
+		int r = 0;
+		
+		try {
+			PreparedStatement ps = MyConnection.getMyConnection().prepareStatement(INSERT_EMPLOYEE);
+			
+			ps.setInt(1, emp.getEmpId());
+			ps.setString(2, emp.getName());
+			ps.setInt(3, emp.getSalary());					/// 1, 2, 3 are the "?"
+			
+			
+			
+			r = ps.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		boolean success=false;
+		
+		return success;
+	}
+
+}

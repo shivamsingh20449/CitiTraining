@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestEmployeeDAO1.testAddEmployee" project="JDBC DEMO" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="TestEmployeeDAO1" time="1.718" uniqueid="[engine:junit-jupiter]/[class:TestEmployeeDAO1]">
+    <testcase name="testAddEmployee" classname="TestEmployeeDAO1" time="1.718" displayname="testAddEmployee()" uniqueid="[engine:junit-jupiter]/[class:TestEmployeeDAO1]/[method:testAddEmployee()]"/>
+  </testsuite>
+</testrun>

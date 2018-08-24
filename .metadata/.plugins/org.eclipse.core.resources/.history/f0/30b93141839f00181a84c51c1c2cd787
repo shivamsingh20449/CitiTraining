@@ -1,0 +1,13 @@
+package com.connections;
+
+import com.pojos.Employee;
+
+public class EmployeeDAO {
+	
+	public void addEmployee(Employee emp)
+	{
+		
+	}
+	
+
+}

@@ -1,0 +1,19 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class DemoMultiCatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+			try{
+				FileWriter write = new FileWriter("Hello.txt");
+
+				
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
+
+	}
+
+}

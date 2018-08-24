@@ -1,0 +1,14 @@
+package com.demo;
+
+public class DemoLambda2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MyInterface2 p = (x,y)-> {return (x.getAge()==y.getAge());};
+		
+		if (p.add(new Person(12, "Shivam"), new Person(14, "Singh")))
+			System.out.println("Equal age");
+	}
+
+}

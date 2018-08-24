@@ -1,0 +1,158 @@
+db.salespeople.insert({
+				"snum":'1001',
+				"sname":'peel',
+				"city":'london',
+				"comm":'0.12',
+				customers:[
+					{
+					"cnum":'2001',
+					"cname":'hoffman',
+					"city":'london',
+					"rating":'100',
+					orders:{
+						"onum":'3003',
+						"amt":'767.19',
+						"odate":new Date('1996-03-10')
+						}
+					},
+					{
+					"cnum":'2006',
+					"cname":'clemens',
+					"city":'london',
+					"rating":'100',
+					orders:[{
+						"onum":'3008',
+						"amt":'4723.00',
+						"odate":new Date('1996-05-10')
+						},
+						 {
+						"onum":'3011',
+						"amt":'9891.88',
+						"odate":new Date('1996-06-10')
+					 }]
+												
+				}
+				]
+				} )
+					
+
+
+
+
+db.salespeople.insert({
+						"snum":'1002',
+						"sname":'serres',
+						"city":'san jose',
+						"comm":'0.13',
+						customers:[
+										{
+											"cnum":'2003',
+											"cname":'liu',
+											"city":'san jose',
+											"rating":'200',
+											orders:{
+														"onum":'3005',
+														"amt":'5160.45',
+														"odate":new Date('1996-03-10')
+													 }
+										},
+										{
+											"cnum":'2004',
+											"cname":'grass',
+											"city":'berlin',
+											"rating":'300',
+											orders:{
+														"onum":'3010',
+														"amt":'1309.95',
+														"odate":new Date('1996-06-10')
+													 }
+										}
+									]
+					} )
+					
+
+db.salespeople.insert({
+						"snum":'1004',
+						"sname":'motika',
+						"city":'london',
+						"comm":'0.11',
+						customers:[
+										{
+											"cnum":'2007',
+											"cname":'pereira',
+											"city":'rome',
+											"rating":'100',
+											orders:{
+														"onum":'3002',
+														"amt":'1900.00',
+														"odate":new Date('1996-03-10')
+													 }
+										}
+										
+									]
+					} )					
+					
+					
+db.salespeople.insert({
+						"snum":'1007',
+						"sname":'rifkin',
+						"city":'barcelona',
+						"comm":'0.15',
+						customers:[
+										{
+											"cnum":'2008',
+											"cname":'cisneros',
+											"city":'san jose',
+											"rating":'300',
+											orders:[{
+														"onum":'3001',
+														"amt":'18.69',
+														"odate":new Date('1996-03-10')
+													 },
+													 {
+														"onum":'3006',
+														"amt":'1098.16',
+														"odate":new Date('1996-03-10')
+													 }
+													 ]
+										}
+										
+									]
+					} )
+					
+db.salespeople.insert({
+						"snum":'1003',
+						"sname":'axelrod',
+						"city":'new york',
+						"comm":'0.10',
+						customers:[
+										{
+											"cnum":'2002',
+											"cname":'giovanni',
+											"city":'rome',
+											"rating":'200',
+											orders:[{
+														"onum":'3009',
+														"amt":'1713.23',
+														"odate":new Date('1996-04-10')
+													 },
+													 {
+														"onum":'3007',
+														"amt":'75.75',
+														"odate":new Date('1996-04-10')
+													 }
+													 ]
+										}
+										
+									]
+					} )
+					
+db.salespeople.insert({
+						"snum":'1005',
+						"sname":'fran',
+						"city":'london',
+						"comm":'0.26',
+						
+					} )
+
+db.salespeople.aggregate([{$group : {_id : "sname", max_order : {$max : "$customers.$orders.$amt"}}}])
